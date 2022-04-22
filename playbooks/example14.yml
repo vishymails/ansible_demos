@@ -1,0 +1,35 @@
+---
+
+- 
+  hosts : AppServer
+
+  vars_files :
+    - example14_vars.yml
+
+  tasks : 
+    - name : Test Dictionary key value 
+      debug : 
+        msg : result is {{ example_key }} 
+    
+    - name : Test Dictionary key value 2
+      debug : 
+        msg : result is {{ dict }} 
+
+    - name : Test Dictionary key value with dot notation  
+      debug : 
+        msg : result is {{ inline_dict.dict_key }}
+
+    - name : Test named list value 
+      debug : 
+        msg : result is {{ named_list }}  
+    
+    - name : Test named list value with dot notation 
+      debug : 
+        msg : result is {{ named_list.3 }}  
+     
+    - name : Test named list value with python notation 
+      debug : 
+        msg : result is {{ named_list[2] }}  
+    
+
+...

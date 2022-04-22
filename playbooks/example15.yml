@@ -1,0 +1,23 @@
+---
+
+- 
+  hosts : AppServer 
+
+  vars_prompt :
+    - name : username
+      private : false
+
+    - name : password 
+      private : true 
+
+  
+  tasks :
+    - name : Print Username 
+      debug :
+        msg : "{{ username }}"
+
+    - name : Print Password 
+      debug :
+        msg : "{{ password }}"
+
+...

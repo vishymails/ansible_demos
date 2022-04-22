@@ -1,0 +1,9 @@
+[centosgroup]
+AppServer
+DBServer
+centos1 ansible_user=root
+centos2
+
+[ubuntugroup]
+ubuntu1
+ubuntu2

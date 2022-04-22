@@ -1,0 +1,9 @@
+[centosgroup]
+AppServer
+DBServer
+centos1
+centos2
+
+[ubuntugroup]
+ubuntu1
+ubuntu2

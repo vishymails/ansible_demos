@@ -1,0 +1,11 @@
+[centosgroup]
+AppServer
+DBServer
+centos1
+centos2
+192.168.0.221
+192.168.0.222
+
+[ubuntugroup]
+ubuntu1
+ubuntu2

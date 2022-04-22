@@ -1,0 +1,23 @@
+---
+
+-
+  hosts : AppServer
+  user : ansibleadm
+  gather_facts : false
+
+  vars : 
+    motd : "Example data from yaml file \n"
+
+  tasks :
+    - name : Configure a Motd
+      copy :
+        content : "{{ motd }}"
+        dest : /etc/motd
+
+    - name : line insert 
+      lineinfile :
+        path : /etc/motd
+        line : 'Added Line 1'
+        insertbefore : BOF
+
+...

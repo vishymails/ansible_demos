@@ -1,0 +1,16 @@
+---
+
+- 
+  hosts : AppServer 
+  gather_facts : true
+
+  tasks :
+    - name : Test Host Variables 
+      debug :
+        msg : "{{ hostvars[ansible_hostname].ansible_port }}"
+
+    - name : Test Group Variables 
+      debug :
+        msg : "{{ ansible_user }}"
+...
+

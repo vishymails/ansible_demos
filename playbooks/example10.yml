@@ -1,0 +1,13 @@
+---
+
+-
+  hosts : AppServer
+  user : ansibleadm
+  gather_facts : false
+
+  tasks :
+    - name : Configure a Motd
+      copy :
+        src : centos_motd
+        dest : /etc/motd
+...

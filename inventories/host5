@@ -1,0 +1,14 @@
+[centosgroup]
+AppServer
+DBServer
+centos1
+centos2
+centos[3:30]
+centos[1:50].isro.com
+
+[ubuntugroup]
+ubuntu1
+ubuntu2
+192.168.1.[1:255]
+192.168.[2:10].[1:255]
+server[1:50].isro.com

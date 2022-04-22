@@ -1,0 +1,27 @@
+---
+
+-
+  hosts : AppServer
+  user : ansibleadm
+  gather_facts : true
+
+  vars : 
+    motd_centos: "Example data only for centos machines \n" 
+    motd_ubuntu : "Example data only for Ubuntu machines \n"
+
+
+  tasks :
+    - name : Configure a motd for Centos 
+      copy  :
+        content : "{{ motd_centos }}"
+        dest : /etc/motd
+      when : ansible_distribution == "CentOS"
+
+    - name : Configure a motd for Ubuntu 
+      copy  :
+        content : "{{ motd_ubuntu }}"
+        dest : /etc/motd
+      when : ansible_distribution == "Ubuntu"
+
+...
+      

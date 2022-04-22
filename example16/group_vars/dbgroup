@@ -1,0 +1,5 @@
+---
+ansible_become : true
+ansible_become_pass : ansibleadm
+
+...

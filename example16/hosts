@@ -1,0 +1,10 @@
+[appgroup]
+AppServer
+
+[dbgroup]
+DBServer
+
+
+[linux:children]
+appgroup
+dbgroup
